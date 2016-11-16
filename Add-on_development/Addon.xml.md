@@ -324,21 +324,27 @@ Example:
 
 With the above example definition, the files must be placed in the resources folder.  
 
-## 1.5 Skin specific elements
+## 1.5 Skin specific elements 皮肤专用元素
 
-### 1.5.1 Overview
+### 1.5.1 Overview 概览
 
 |:-----------:|:--------------:|
 |effectslowdown|  A multiplier that is applied to all <animation> effect lengths in the skin. Useful to slow down all animations globally so that you can better configure timings and see interactions between animating controls.
 debugging   When set to true, it'll display onscreen debug information (xml filename, mouse position and focused control type and name) in the skin.
 |res |Support for arbitrary skin resolutions.|
 
-### 1.5.2 How window xml files are found
+### 1.5.2 How window xml files are found 窗口xml文件是如何被发现的
 Kodi can run in many differing resolutions, and a skin should try and cater to all these resolutions. The easiest way is to develop for one specific resolution and make sure that all controls contain <width> and <height> tags. That way, Kodi can scale the controls to the new screen resolution.  
+
+Kodi可以运行在很多不同的分辨率中，
 
 However, you may choose to develop alternative window xml files for differing resolutions (such as for HDTV resolutions, or for widescreen versus 4x3 resolutions).  
 
+不过，你可以选择为不同分辨率开发不同的窗口xml文件（比如，）
+
 The order that Kodi looks for it's skin files are as follows:  
+
+如下是Kodi查找皮肤文件的顺序：  
 
 1. It first looks in the current screenmode folder (one of 1080i, 720p, NTSC16x9, NTSC, PAL16x9 or PAL)
 2. If the current screenmode is 1080i and there's no 1080i folder, it then looks in the 720p folder.
@@ -346,7 +352,7 @@ The order that Kodi looks for it's skin files are as follows:
 
 This allows you to just put any window files that do not require special treatment for 16x9 resolutions etc. in the <defaultresolution> folder, preventing needless repetition.  
 
-# 2 Examples
+# 2 Examples 示例
 
 ## 2.1 addon.xml for skins
 
